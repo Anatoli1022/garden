@@ -1,0 +1,45 @@
+@import '../../../../styles/variables.scss';
+
+.hero {
+  position: relative;
+}
+
+.hero-container {
+  position: relative;
+  padding-top: 80px;
+  padding-left: 40px;
+  padding-bottom: 210px;
+}
+
+.title {
+  font-size: 96px;
+  font-weight: 700;
+  line-height: 110%;
+  color: $color-white;
+}
+
+.button {
+  background-color: $color-green;
+  font-size: 20px;
+  font-weight: 600;
+  color: $color-white;
+  transition: $transition-base;
+  padding: 16px 56px;
+  margin-top: 56px;
+  cursor: pointer;
+  border-radius: 6px;
+  border: 1px solid $color-green;
+
+  &:hover {
+    background: none;
+  }
+}
+
+.background {
+  position: absolute;
+  left: 0;
+  top: 0;
+  object-fit: cover;
+  z-index: -1;
+  width: 100%;
+}
