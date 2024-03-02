@@ -1,0 +1,78 @@
+@import '../../../../styles/variables.scss';
+
+.sale {
+  margin-top: 80px;
+}
+
+.title {
+  font-size: 64px;
+  font-weight: 700;
+  line-height: 110%;
+}
+
+.list {
+  display: flex;
+  align-items: center;
+  row-gap: 32px;
+  column-gap: 32px;
+  flex-wrap: wrap;
+  margin-top: 45px;
+}
+
+.item {
+  border: 1px solid $color-gray-lite;
+  position: relative;
+  border-radius: 12px;
+  max-width: 316px;
+}
+
+.item-title {
+  display: block;
+  color: $color-black;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 130%;
+}
+
+.image {
+  border-radius: 12px 12px 0 0;
+  border-bottom: 1px solid $color-gray-lite;
+  max-width: 313px;
+}
+
+.wrapper-info {
+  padding: 0 32px 32px 32px;
+  margin-top: 20px;
+}
+
+.price-wrapper {
+  margin-top: 16px;
+}
+
+.new-price {
+  color: $color-black;
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 110%;
+  letter-spacing: 0%;
+}
+
+.old-price {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 130%;
+  letter-spacing: 0%;
+  margin-left: 16px;
+  color: $color-gray;
+  text-decoration-line: line-through;
+}
+
+.sale-percent {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  padding: 8px;
+  border-radius: 6px;
+  background-color: $color-green;
+  color: $color-white;
+}
