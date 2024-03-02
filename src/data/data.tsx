@@ -10,14 +10,7 @@ import decorativeForgedImg from '../assets/decorativeForged.jpeg';
 import flowerBasketImg from '../assets/flowerBasket.jpeg';
 import aquariumLockImg from '../assets/aquariumLock.jpeg';
 
-interface myData {
-  price: number;
-  image: string;
-  title: string;
-  discount: number;
-  description: string;
-  id: number;
-}
+import myData from '../types';
 
 const data: myData[] = [
   {
@@ -36,6 +29,7 @@ This secateur cuts up to 2.5 cm diameter. Carrying RHS
 endorsement, possibly the highest accolade in gardening, for peace 
 of mind this pruner comes with a ten-year guarantee against `,
     id: 1,
+    slug: '1',
   },
   {
     price: 35,
@@ -44,6 +38,7 @@ of mind this pruner comes with a ten-year guarantee against `,
     discount: 26,
     description: '',
     id: 2,
+    slug: '2',
   },
   {
     price: 14,
@@ -52,6 +47,7 @@ of mind this pruner comes with a ten-year guarantee against `,
     discount: 36,
     description: '',
     id: 3,
+    slug: '3',
   },
   {
     price: 155,
@@ -60,6 +56,7 @@ of mind this pruner comes with a ten-year guarantee against `,
     discount: 0,
     description: '',
     id: 4,
+    slug: '4',
   },
   {
     price: 180,
@@ -68,6 +65,7 @@ of mind this pruner comes with a ten-year guarantee against `,
     discount: 0,
     description: '',
     id: 5,
+    slug: '5',
   },
   {
     price: 179,
@@ -76,6 +74,7 @@ of mind this pruner comes with a ten-year guarantee against `,
     discount: 0,
     description: '',
     id: 6,
+    slug: '6',
   },
   {
     price: 12,
@@ -84,6 +83,7 @@ of mind this pruner comes with a ten-year guarantee against `,
     discount: 0,
     description: '',
     id: 7,
+    slug: '7',
   },
   {
     price: 120,
@@ -92,6 +92,7 @@ of mind this pruner comes with a ten-year guarantee against `,
     discount: 18,
     description: '',
     id: 8,
+    slug: '8',
   },
   {
     price: 1000,
@@ -100,6 +101,7 @@ of mind this pruner comes with a ten-year guarantee against `,
     discount: 50,
     description: '',
     id: 9,
+    slug: '9',
   },
   {
     price: 150,
@@ -108,6 +110,7 @@ of mind this pruner comes with a ten-year guarantee against `,
     discount: 34,
     description: '',
     id: 10,
+    slug: '10',
   },
   {
     price: 200,
@@ -116,6 +119,7 @@ of mind this pruner comes with a ten-year guarantee against `,
     discount: 25,
     description: '',
     id: 11,
+    slug: '11',
   },
 ];
 
