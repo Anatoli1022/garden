@@ -8,7 +8,7 @@ import data from '../../../../data/data.tsx';
 
 const Products = () => {
   return (
-    <section className={cx('sale')}>
+    <section className={cx('products')}>
       <div className={cx('container')}>
         <h2 className={cx('title')}>All products</h2>
 
