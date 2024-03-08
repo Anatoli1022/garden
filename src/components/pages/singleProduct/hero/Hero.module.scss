@@ -37,6 +37,14 @@
   text-decoration-line: line-through;
 }
 
+.description {
+  color: $color-black;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 130%;
+  letter-spacing: 0%;
+}
+
 .wrapper-buttons {
   margin-top: 32px;
 }

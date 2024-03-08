@@ -1,11 +1,18 @@
-import myData from '../../../../types';
+import {myData} from '../../../../types';
 import classNames from 'classnames/bind';
-
 import styles from './Hero.module.scss';
+
+import { useAppDispatch } from '../../../../hooks';
+import { setAddItem } from '../../../../redux/basket/basket';
 
 const cx = classNames.bind(styles);
 const Hero: React.FC<{ info: myData }> = ({ info }) => {
   const booleanDiscount = info.discount > 0 ? true : false;
+  const dispatch = useAppDispatch();
+
+  const handleAddad = () => {
+    dispatch(setAddItem(info));
+  };
   return (
     <section className={cx('hero')}>
       <div className={cx('container')}>
@@ -27,11 +34,15 @@ const Hero: React.FC<{ info: myData }> = ({ info }) => {
               )}
             </div>
             <div className={cx('wrapper-buttons')}>
-              <button className={cx('button-green', 'button-product')}>
+              <button
+                className={cx('button-green', 'button-product')}
+                onClick={() => handleAddad()}
+              >
                 Add to cart
               </button>
             </div>
           </div>
+          <p className={cx('description')}>{info?.description}</p>
         </div>
       </div>
     </section>
