@@ -11,10 +11,11 @@ const Sales = () => {
   return (
     <section className={cx('sale')}>
       <div className={cx('container')}>
+        <h2 className={cx('title')}>Discounted items</h2>
         <ul className={cx('list')}>
           {filteredData.map((item) => (
             <li key={item.id} className={cx('item')}>
-              <Link to="">
+              <Link to={`../allProducts/${item.id}`}>
                 <img
                   src={item.image}
                   alt=""
