@@ -26,7 +26,7 @@ const Sale = () => {
         <ul className={cx('list')}>
           {filteredData.map((item) => (
             <li key={item.id} className={cx('item')}>
-              <Link to="">
+              <Link to={`./allProducts/${item.id}`}>
                 <img
                   src={item.image}
                   alt=""
