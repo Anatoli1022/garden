@@ -8,7 +8,7 @@
   position: relative;
   padding-top: 80px;
   padding-left: 40px;
-  padding-bottom: 210px;
+  padding-bottom: 180px;
 }
 
 .title {
@@ -19,20 +19,8 @@
 }
 
 .button {
-  background-color: $color-green;
-  font-size: 20px;
-  font-weight: 600;
-  color: $color-white;
-  transition: $transition-base;
   padding: 16px 56px;
-  margin-top: 56px;
-  cursor: pointer;
-  border-radius: 6px;
-  border: 1px solid $color-green;
-
-  &:hover {
-    background: none;
-  }
+  margin-top: 40px;
 }
 
 .background {

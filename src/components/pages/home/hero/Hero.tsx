@@ -10,7 +10,7 @@ const Hero = () => {
     <section className={cx('hero')}>
       <div className={cx('container', 'hero-container')}>
         <h1 className={cx('title')}>Amazing Discounts on Garden Products!</h1>
-        <button className={cx('button')}>Check out</button>
+        <button className={cx('button', 'button-green')}>Check out</button>
         <img
           src={background}
           alt=""
