@@ -26,3 +26,23 @@
     color: $color-green;
   }
 }
+
+.basket {
+  position: relative;
+}
+
+.items-basket {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: $color-white;
+  position: absolute;
+  background-color: $color-green;
+  border-radius: 50%;
+  min-width: 26px;
+  min-height: 26px;
+  text-align: center;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 90%;
+}
