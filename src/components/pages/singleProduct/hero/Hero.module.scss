@@ -51,6 +51,8 @@
 
 .button-product {
   padding: 16px 52px 16px 52px;
+  white-space: nowrap;
+
   &:hover {
     color: $color-black;
   }
