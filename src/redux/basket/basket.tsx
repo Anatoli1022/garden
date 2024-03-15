@@ -1,17 +1,14 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
-import { BasketState, myData } from '../../types';
+import {
+  BasketState,
+  myData,
+  IncreaseQuantityPayload,
+  DecreaseQuantityPayload,
+} from '../../types';
 
 const initialState: BasketState = {
   products: [],
 };
-
-interface IncreaseQuantityPayload {
-  id: number;
-}
-
-interface DecreaseQuantityPayload {
-  id: number;
-}
 
 const basketReducer = createSlice({
   name: 'basket',
@@ -52,6 +49,7 @@ const basketReducer = createSlice({
   },
 });
 
-export const { setAddItem, increaseQuantity,decreaseQuantity } = basketReducer.actions;
+export const { setAddItem, increaseQuantity, decreaseQuantity } =
+  basketReducer.actions;
 
 export default basketReducer.reducer;
