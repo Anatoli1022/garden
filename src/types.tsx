@@ -6,8 +6,16 @@ export interface myData {
   description: string;
   id: number;
   slug: string;
+  quantity: number;
 }
 
+export interface IncreaseQuantityPayload {
+  id: number;
+}
+
+export interface DecreaseQuantityPayload {
+  id: number;
+}
 
 export interface BasketState {
   products: myData[];
