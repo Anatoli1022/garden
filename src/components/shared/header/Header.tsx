@@ -10,6 +10,13 @@ const cx = classNames.bind(styles);
 const Header = () => {
   const itemsBasket = useAppSelector((state) => state.basket.products);
 
+  const getQuantity = () => {
+    let quantity = 0;
+    itemsBasket.forEach((item) => (quantity += item.quantity));
+    return quantity;
+  };
+
+  const cartCount = getQuantity();
   return (
     <header className={cx('header')}>
       <div className={cx('container')}>
@@ -44,7 +51,7 @@ const Header = () => {
           <div>
             <Link to="/shoppingCart" className={cx('basket')}>
               {itemsBasket.length > 0 ? (
-                <span className={cx('items-basket')}>{itemsBasket.length}</span>
+                <span className={cx('items-basket')}>{cartCount}</span>
               ) : null}
 
               <img src={basket} alt="" loading="eager" />
