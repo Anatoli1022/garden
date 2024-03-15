@@ -1,7 +1,7 @@
 import Categories from '../components/shared/categories/Categories';
 import Contact from '../components/shared/contact/Contact';
 
-const CaterogiesPage = () => {
+const CategoriesPage = () => {
   return (
     <>
       <Categories />
@@ -10,4 +10,4 @@ const CaterogiesPage = () => {
   );
 };
 
-export default CaterogiesPage;
+export default CategoriesPage;
