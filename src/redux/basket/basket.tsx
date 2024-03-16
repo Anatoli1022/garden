@@ -4,6 +4,7 @@ import {
   myData,
   IncreaseQuantityPayload,
   DecreaseQuantityPayload,
+  RemoveItemPayload,
 } from '../../types';
 
 const initialState: BasketState = {
@@ -46,10 +47,15 @@ const basketReducer = createSlice({
         item.quantity--;
       }
     },
+    removeItem: (state, action: PayloadAction<RemoveItemPayload>) => {
+      state.products = state.products.filter(
+        (item) => item.id !== action.payload.id
+      );
+    },
   },
 });
 
-export const { setAddItem, increaseQuantity, decreaseQuantity } =
+export const { setAddItem, increaseQuantity, decreaseQuantity, removeItem } =
   basketReducer.actions;
 
 export default basketReducer.reducer;
