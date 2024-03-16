@@ -1,12 +1,18 @@
 import classNames from 'classnames/bind';
 import { Link } from 'react-router-dom';
 import styles from './Products.module.scss';
-
+import { useDispatch } from 'react-redux';
+import { setAddItem } from '../../../../redux/basket/basket';
 const cx = classNames.bind(styles);
 
 import data from '../../../../data/data.tsx';
+import { myData } from '../../../../types.tsx';
 
 const Products = () => {
+  const dispatch = useDispatch();
+  const handleAdded = (item: myData) => {
+    dispatch(setAddItem(item));
+  };
   return (
     <section className={cx('products')}>
       <div className={cx('container')}>
@@ -41,6 +47,12 @@ const Products = () => {
                   <div className={cx('sale-percent')}>-{item.discount}%</div>
                 )}
               </Link>
+              <button
+                className={cx('button-add')}
+                onClick={() => handleAdded(item)}
+              >
+                Add to cart
+              </button>
             </li>
           ))}
         </ul>
