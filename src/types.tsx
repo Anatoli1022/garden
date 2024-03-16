@@ -9,6 +9,11 @@ export interface myData {
   quantity: number;
 }
 
+export interface BasketState {
+  products: myData[];
+}
+
+
 export interface IncreaseQuantityPayload {
   id: number;
 }
@@ -17,6 +22,7 @@ export interface DecreaseQuantityPayload {
   id: number;
 }
 
-export interface BasketState {
-  products: myData[];
+export interface RemoveItemPayload {
+  id: number;
 }
+
