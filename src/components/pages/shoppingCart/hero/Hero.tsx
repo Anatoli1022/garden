@@ -6,7 +6,13 @@ import { useDispatch } from 'react-redux';
 import {
   increaseQuantity,
   decreaseQuantity,
+  removeItem,
 } from '../../../../redux/basket/basket';
+
+
+import plus from '../../../../assets/plus.svg';
+import minus from '../../../../assets/minus.svg';
+import delet from '../../../../assets/x.svg'
 
 const cx = classNames.bind(styles);
 
@@ -19,6 +25,10 @@ const Hero = () => {
 
   const onDecreaseQuantity = (productId: number) => {
     dispatch(decreaseQuantity({ id: productId }));
+  };
+
+  const onRemoveItem = (productId: number) => {
+    dispatch(removeItem({ id: productId }));
   };
 
   const itemsBasket = useAppSelector((state) => state.basket.products);
@@ -58,10 +68,7 @@ const Hero = () => {
               <ul className={cx('list')}>
                 {itemsBasket.map((item) => (
                   <li key={item.id} className={cx('item')}>
-                    <Link
-                      to={`../allProducts/${item.id}`}
-                      className={cx('product-link')}
-                    >
+                    <Link to={`../allProducts/${item.id}`}>
                       <img
                         src={item.image}
                         alt=""
@@ -73,21 +80,21 @@ const Hero = () => {
                     <div className={cx('wrapper-info')}>
                       <h2 className={cx('item-title')}>{item.title}</h2>
                       <div className={cx('products-information')}>
-                        <div className={cx('container-quantity')}>
+                        <div className={cx('container-buttons')}>
                           <button
-                            className={cx('button-decrease')}
+                            className={cx('button')}
                             onClick={() => onDecreaseQuantity(item.id)}
                           >
-                            -
+                            <img src={minus} alt="minus" loading="eager" />
                           </button>
                           <span className={cx('item-quantity')}>
                             {item.quantity}
                           </span>
                           <button
-                            className={cx('button-increase')}
+                            className={cx('button')}
                             onClick={() => onIncreaseQuantity(item.id)}
                           >
-                            +
+                            <img src={plus} alt="plus" loading="eager" />
                           </button>
                         </div>
                         <div>
@@ -108,6 +115,14 @@ const Hero = () => {
                         </div>
                       </div>
                     </div>
+                    <button
+                      className={cx('button-delete')}
+                      title="Remove item from cart"
+                      onClick={() => onRemoveItem(item.id)}
+                      type="button"
+                    >
+                     <img src={delet} alt="delete" loading="eager" />
+                    </button>
                   </li>
                 ))}
               </ul>
@@ -129,6 +144,30 @@ const Hero = () => {
                     }, 0)}
                   </span>
                 </div>
+                <form action="" className={cx('form')}>
+                  <input
+                    type="text"
+                    className={cx('input')}
+                    placeholder="Name"
+                  />
+                  <input
+                    type="text"
+                    className={cx('input')}
+                    placeholder="Phone number"
+                  />
+                  <input
+                    type="text"
+                    className={cx('input')}
+                    placeholder="Email"
+                  />
+                </form>
+                <button
+                  type="submit"
+                  value="Submit"
+                  className={cx('button-form', 'button-green')}
+                >
+                  Order
+                </button>
               </div>
             </>
           ) : (

@@ -13,6 +13,7 @@
   margin-top: 40px;
   display: flex;
   justify-content: space-between;
+  column-gap: 32px;
 }
 .title {
   font-size: 64px;
@@ -56,10 +57,8 @@
   display: flex;
   border-radius: 12px;
   max-height: 180px;
-}
-
-.product-link {
-  display: flex;
+  max-width: 780px;
+  position: relative;
 }
 
 .item-title {
@@ -73,16 +72,32 @@
   display: flex;
   margin-top: 32px;
   column-gap: 32px;
-}
-
-.container-quantity {
-  display: flex;
   align-items: center;
 }
 
+.container-buttons {
+  display: flex;
+  align-items: center;
+  border-top: 1px solid $color-gray-lite;
+  border-bottom: 1px solid $color-gray-lite;
+  border-radius: 6px;
+  max-height: 58px;
+}
+
+.button {
+  background: none;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  padding: 17px;
+  border: 1px solid $color-gray-lite;
+  border-radius: 6px;
+  max-height: 58px;
+}
+
 .item-quantity {
-  display: block;
   font-size: 20px;
+  padding: 16px 38px;
   font-weight: 600;
   line-height: 130%;
 }
@@ -90,6 +105,7 @@
 .image {
   border-radius: 12px 0 0 12px;
   border-right: 1px solid $color-gray-lite;
+  max-height: 100%;
 }
 
 .wrapper-info {
@@ -112,6 +128,17 @@
   margin-left: 16px;
   color: $color-gray;
   text-decoration-line: line-through;
+  vertical-align: top;
+}
+
+.button-delete {
+  position: absolute;
+  right: 32px;
+  top: 32px;
+  cursor: pointer;
+  border: none;
+  background: none;
+  outline: none;
 }
 
 .order-wrapper {
@@ -137,6 +164,8 @@
 
 .wrapper-price {
   margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
 }
 
 .total-text {
@@ -149,7 +178,39 @@
   font-size: 64px;
   font-weight: 700;
   line-height: 110%;
-  margin-left: 135px;
+}
+
+.form {
+  margin-top: 32px;
+}
+
+.input {
+  display: block;
+  padding: 16px 32px;
+  width: 484px;
+  border-radius: 6px;
+  border: 1px solid $color-gray-lite;
+  margin-top: 16px;
+  outline: none;
+  font-size: 20px;
+  &::placeholder {
+    font-size: 20px;
+    color: $color-gray;
+    font-weight: 500;
+    line-height: 130%;
+  }
+  &:first-child {
+    margin-top: 0;
+  }
+}
+
+.button-form {
+  margin-top: 32px;
+  padding: 16px 0;
+  width: 100%;
+  &:hover {
+    color: $color-black;
+  }
 }
 
 .text {
