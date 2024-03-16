@@ -1,4 +1,4 @@
-import {myData} from '../../../../types';
+import { myData } from '../../../../types';
 import classNames from 'classnames/bind';
 import styles from './Hero.module.scss';
 
@@ -10,7 +10,7 @@ const Hero: React.FC<{ info: myData }> = ({ info }) => {
   const booleanDiscount = info.discount > 0 ? true : false;
   const dispatch = useAppDispatch();
 
-  const handleAddad = () => {
+  const handleAdded = () => {
     dispatch(setAddItem(info));
   };
   return (
@@ -36,7 +36,7 @@ const Hero: React.FC<{ info: myData }> = ({ info }) => {
             <div className={cx('wrapper-buttons')}>
               <button
                 className={cx('button-green', 'button-product')}
-                onClick={() => handleAddad()}
+                onClick={() => handleAdded()}
               >
                 Add to cart
               </button>
